@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Thu Sep 18 11:26:37 2025 as: /usr/lib/nmap/nmap -Pn -sT -T4 -F -oN nmap_quick.txt 16.171.233.163
+Nmap scan report for ec2-16-171-233-163.eu-north-1.compute.amazonaws.com (16.171.233.163)
+Host is up (0.27s latency).
+Not shown: 98 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+8080/tcp open  http-proxy
+
+# Nmap done at Thu Sep 18 11:27:29 2025 -- 1 IP address (1 host up) scanned in 52.01 seconds

@@ -1,0 +1,75 @@
+version: "3.8"
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: lab_web
+    volumes:
+      - ./web/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./web/index.html:/usr/share/nginx/html/index.html:ro
+    ports:
+      - "8080:80"
+    depends_on:
+      - app-python
+      - app-java
+    networks:
+      secure_net:
+        ipv4_address: 172.25.0.10
+
+  app-python:
+    build: ./python-app
+    container_name: lab_python
+    depends_on:
+      - db
+    networks:
+      secure_net:
+        ipv4_address: 172.25.0.11
+    environment:
+      DB_HOST: db
+      DB_USER: labuser
+      DB_PASSWORD: labpass123
+      DB_NAME: labdb
+
+  app-java:
+    build: ./java-app
+    container_name: lab_java
+    depends_on:
+      - db
+    networks:
+      secure_net:
+        ipv4_address: 172.25.0.12
+    environment:
+      DB_HOST: db
+      DB_USER: labuser
+      DB_PASSWORD: labpass123
+      DB_NAME: labdb
+
+  db:
+    image: mysql:8.0
+    container_name: lab_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: secretpass
+      MYSQL_DATABASE: labdb
+      MYSQL_USER: labuser
+      MYSQL_PASSWORD: labpass123
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      secure_net:
+        ipv4_address: 172.25.0.13
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+networks:
+  secure_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+
+volumes:
+  mysql_data:

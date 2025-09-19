@@ -1,0 +1,17 @@
+# Nmap 7.95 scan initiated Thu Sep 18 11:27:10 2025 as: /usr/lib/nmap/nmap -Pn -sT -sV -O -A -oA nmap_full -v 16.171.233.163
+Nmap scan report for 16.171.233.163
+Host is up (0.051s latency).
+All 1000 scanned ports on 16.171.233.163 are in ignored states.
+Not shown: 990 filtered tcp ports (no-response), 10 filtered tcp ports (host-unreach)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: D-Link DFL-700 firewall (89%), HP Officejet Pro 8500 printer (89%), IBM i 7.4 (89%), ReactOS 0.3.7 (89%), Sanyo PLC-XU88 digital video projector (89%), Sonus GSX9000 VoIP proxy (88%), Asus WL-500gP wireless broadband router (88%), Microsoft Windows 2000 (88%), Microsoft Windows Server 2003 Enterprise Edition SP2 (88%), Microsoft Windows Server 2003 SP2 (88%)
+No exact OS matches for host (test conditions non-ideal).
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT     ADDRESS
+1   0.28 ms 192.168.154.2
+2   ... 30
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 18 11:28:29 2025 -- 1 IP address (1 host up) scanned in 78.44 seconds

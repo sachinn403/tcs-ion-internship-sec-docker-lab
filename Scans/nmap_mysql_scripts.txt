@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Thu Sep 18 11:30:55 2025 as: /usr/lib/nmap/nmap -sT -sV -p 3306 --script=mysql-info,mysql-empty-password -oN nmap_mysql_scripts.txt 16.171.233.163
+Nmap scan report for ec2-16-171-233-163.eu-north-1.compute.amazonaws.com (16.171.233.163)
+Host is up (0.00043s latency).
+
+PORT     STATE    SERVICE VERSION
+3306/tcp filtered mysql
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 18 11:31:02 2025 -- 1 IP address (1 host up) scanned in 6.97 seconds
