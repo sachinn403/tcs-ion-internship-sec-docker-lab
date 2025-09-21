@@ -1,0 +1,7 @@
+# Nmap 7.95 scan initiated Sat Sep 20 10:30:37 2025 as: /usr/lib/nmap/nmap -sU -p- -oN nmap_udp.txt 16.171.233.163
+Nmap scan report for ec2-16-171-233-163.eu-north-1.compute.amazonaws.com (16.171.233.163)
+Host is up (0.00024s latency).
+All 65535 scanned ports on ec2-16-171-233-163.eu-north-1.compute.amazonaws.com (16.171.233.163) are in ignored states.
+Not shown: 65535 open|filtered udp ports (no-response)
+
+# Nmap done at Sat Sep 20 10:32:28 2025 -- 1 IP address (1 host up) scanned in 110.87 seconds

@@ -1,0 +1,1 @@
+# Nmap 7.95 scan initiated Sat Sep 20 10:30:10 2025 as: /usr/lib/nmap/nmap -Pn -sT -p- -oA nmap_allports -v 16.171.233.163

